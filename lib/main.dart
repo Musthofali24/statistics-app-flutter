@@ -1,3 +1,5 @@
+import 'package:testapp/state_util.dart';
+import 'package:testapp/core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/theme_provider.dart';
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
       builder: (context, themeProvider, child) {
         return MaterialApp(
           title: 'StatisKita',
+          navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: themeProvider.themeData,
           home: const SplashScreen(),

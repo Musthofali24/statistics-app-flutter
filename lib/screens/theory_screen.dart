@@ -169,10 +169,14 @@ class TheoryScreen extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF6B4EFF), // Judul tetap ungu di kedua mode
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Theme.of(context).colorScheme.secondary
+                  : Theme.of(context)
+                      .colorScheme
+                      .primary, // Judul tetap ungu di kedua mode
             ),
           ),
           const SizedBox(height: 8),
