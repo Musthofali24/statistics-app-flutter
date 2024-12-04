@@ -1,17 +1,29 @@
-import 'package:testapp/state_util.dart';
-import 'package:testapp/core.dart';
+import 'package:statiskita/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'providers/theme_provider.dart';
-import 'screens/splash_screen.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeProvider(),
-      child: const MyApp(),
-    ),
-  );
+  // Pastikan Flutter binding diinisialisasi
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Konfigurasi sistem UI
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+      overlays: [] // Kosongkan overlays untuk fullscreen
+      );
+
+  // Konfigurasi orientasi aplikasi (opsional)
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]).then((_) {
+    // Jalankan aplikasi setelah konfigurasi selesai
+    runApp(
+      ChangeNotifierProvider(
+        create: (_) => ThemeProvider(),
+        child: const MyApp(),
+      ),
+    );
+  });
 }
 
 class MyApp extends StatelessWidget {

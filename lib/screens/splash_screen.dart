@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Update import
+import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -39,9 +39,7 @@ class _SplashScreenState extends State<SplashScreen>
     _controller.forward().then((_) {
       Future.delayed(const Duration(milliseconds: 500), () {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-              builder: (_) =>
-                  const HomeScreen()), // Update navigasi ke HomeScreen
+          MaterialPageRoute(builder: (_) => const HomeScreen()),
         );
       });
     });
@@ -75,46 +73,15 @@ class _SplashScreenState extends State<SplashScreen>
                 opacity: _opacityAnimation.value,
                 child: Transform.scale(
                   scale: _scaleAnimation.value,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF6B4EFF),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFF6B4EFF).withOpacity(0.5),
-                              blurRadius: 20,
-                              spreadRadius: 5,
-                            ),
-                          ],
-                        ),
-                        child: const Icon(
-                          Icons.analytics,
-                          size: 80,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(height: 24),
-                      const Text(
-                        'StatisKita', // Update nama aplikasi
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        'Statistik Mudah untuk Semua', // Update tagline
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white.withOpacity(0.8),
-                        ),
-                      ),
-                    ],
+                  // Using SizedBox instead of Container for better performance
+                  // since we only need to control dimensions
+                  child: SizedBox(
+                    width: 200,
+                    height: 200,
+                    child: Image.asset(
+                      'assets/icon/logo.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               );
