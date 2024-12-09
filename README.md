@@ -1,4 +1,4 @@
-# testapp
+# StatisKita
 
 A new Flutter project.
 
