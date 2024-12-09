@@ -37,6 +37,7 @@ dependencies:
   fl_chart: ^0.65.0
   provider: ^6.0.5
   shared_preferences: ^2.2.2
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +74,10 @@ flutter:
     - assets/icon/logo.png
     - assets/icon/app_icon.png
     - assets/icon/Statiskita.png
+    - assets/profiles/profile_ali.png
+    - assets/profiles/profile_aqsha.png
+    - assets/profiles/profile_arum.png
+    - assets/profiles/profile_dandi.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

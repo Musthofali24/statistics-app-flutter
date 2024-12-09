@@ -37,7 +37,7 @@ class ThemeProvider with ChangeNotifier {
     scaffoldBackgroundColor: const Color(0xFF1A1B1E),
     colorScheme: const ColorScheme.dark(
       primary: Color(0xFF6B4EFF),
-      secondary: Color(0xFF9B85FF),
+      secondary: Color.fromARGB(255, 147, 161, 242),
       surface: Color(0xFF24262B),
       surfaceContainerHigh: Color(0xFF1A1B1E),
       onSurface: Colors.white,
@@ -109,7 +109,7 @@ class ThemeProvider with ChangeNotifier {
     scaffoldBackgroundColor: const Color(0xFFF5F5F5),
     colorScheme: const ColorScheme.light(
       primary: Color(0xFF6B4EFF),
-      secondary: Color(0xFF9B85FF),
+      secondary: Color.fromARGB(255, 147, 161, 242),
       surface: Colors.white,
       surfaceContainerHigh: Color(0xFFF5F5F5),
       onSurface: Color(0xFF1A1B1E),

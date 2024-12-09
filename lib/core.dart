@@ -8,5 +8,6 @@ export 'package:statiskita/screens/calculator_screen.dart';
 export 'package:statiskita/screens/home_screen.dart';
 export 'package:statiskita/screens/splash_screen.dart';
 export 'package:statiskita/screens/theory_screen.dart';
+export 'package:statiskita/screens/about_screen.dart';
 export 'package:statiskita/state_util.dart';
 export 'package:statiskita/widgets/theme_toggle.dart';

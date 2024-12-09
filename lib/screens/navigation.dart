@@ -13,6 +13,7 @@ class _MainNavigationState extends State<MainNavigation> {
     const HomeScreen(),
     const CalculatorScreen(),
     const TheoryScreen(),
+    const AboutScreen(),
   ];
 
   @override
@@ -38,6 +39,11 @@ class _MainNavigationState extends State<MainNavigation> {
             icon: Icon(Icons.book_outlined),
             selectedIcon: Icon(Icons.book),
             label: 'Theory',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.people_outlined),
+            selectedIcon: Icon(Icons.people),
+            label: 'About',
           ),
         ],
         selectedIndex: _selectedIndex,

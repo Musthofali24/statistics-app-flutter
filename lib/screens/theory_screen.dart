@@ -9,7 +9,6 @@ class TheoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Teori Statistik'),
-        backgroundColor: const Color(0xFF2D3875),
         actions: const [
           ThemeToggle(),
         ],
